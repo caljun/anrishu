@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import { site } from '@/lib/site';
+export const metadata = {title: `プライバシーポリシー（案） | ${site.name}`};
+export default function Privacy(){return <main className="privacy-page"><Link href="/" className="text-link">← ホームに戻る</Link><p className="eyebrow">PRIVACY POLICY</p><h1>プライバシーポリシー</h1><p className="status-pill">公開前の案 · 運営者確認待ち</p><p>相談窓口の開設前に、実際の運営体制に合わせて本方針を確定し掲載します。現在、このサイトに情報を送信するフォームはありません。</p>{[['取得する情報','相談時に、お名前、連絡先、犬の状態や相談内容など、対応に必要な情報をお伺いする予定です。'],['利用目的','お問い合わせへの回答、利用のご案内、サービスの提供に必要な連絡のために利用します。'],['管理と第三者提供','適切な安全管理に努めます。第三者提供や委託、保存期間等の詳細は、運営体制の確定後に掲載します。'],['外部サービス','LINE・Instagram等の外部サービスをご利用の場合は、各サービスのプライバシーポリシーが適用されます。'],['お問い合わせ先','事業者名・所在地・個人情報に関するお問い合わせ先は準備中です。']].map(([title,body])=><section key={title}><h2>{title}</h2><p>{body}</p></section>)}</main>}
